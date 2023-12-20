@@ -1,0 +1,69 @@
+.edgeFooter {
+    height: 80px;
+    background-color: #4C5866;
+    position: relative;
+
+    @include phones {
+        height: 127px;
+    }
+
+    &::after {
+        content: 'Simple ® 2021';
+        position: absolute;
+        height: 21px;
+        width: 100%;
+        background-color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        color: #4C5866;
+        line-height: 15.23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        height: 24px;
+        display: flex;
+
+        @include phones {
+        height: 87px;
+        flex-direction: column;
+    }
+
+        .footerLogo {
+            flex: 1;
+            display: flex;
+
+            @include phones {
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+
+            a {
+                display: flex;
+            }
+        }
+
+        .footerIcons {
+            flex-basis: 186px;
+            display: flex;
+            justify-content: space-around;
+
+            @include phones {
+                border-top: 1px solid #DDDDDD;
+            }
+
+            a {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                #footerIcons {
+                    height: 21px;
+                    width: 24px;
+                }
+            }
+        }
+    }
+}

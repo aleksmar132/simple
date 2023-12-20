@@ -1,0 +1,87 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+
+    // box-sizing: border-box; // может помочь при адаптации
+}
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    max-width: 1150px;
+    z-index: 1000000;
+
+    @include tablet690 {
+        width: 90%;
+    }
+}
+
+.containerFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color:#4C5866;
+    line-height: 60px;
+
+    @include tablet690 {
+        font-size: 50px;
+      }
+
+    @include tablet510 {
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+    @include phones {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 40px;
+
+    @include tablet690 {
+        font-size: 30px;
+      }
+
+    @include tablet510 {
+        font-size: 24px;
+    }
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 35.16px;
+
+    @include tablet690 {
+        font-size: 30px;
+      }
+
+    @include tablet510 {
+        font-size: 24px;
+    }
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+    line-height: 27px;
+
+    @include tablet510 {
+        font-size: 16px;
+    }
+}

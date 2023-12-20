@@ -1,0 +1,85 @@
+.lineTopActive {
+    margin-top: 10px;
+    transform: rotate(45deg);
+    transition: 0.2s;
+}
+
+.lineCenterActive {
+    display: none;
+    transition: 0.2s;
+}
+
+.lineBottonActive {
+    transform: rotate(-45deg);
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.headerBodyBurger {
+    display: none;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+    }
+
+    @include phones {
+        height: 328px;
+        position: absolute;
+        z-index: 1000000;
+        top: 105px;
+        width: 100%;
+
+        .bodyBurgerList {
+            background-color: #ebebeb;
+            height: 100%;
+
+            .bodyBurgerItem {
+                margin-bottom: 50px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color:#4C5866;
+                    line-height: 21px;
+
+                    &:hover {
+                        color: #7875FE;
+                    }
+
+                    &:focus {
+                        color: #4C5866;
+                        background: #DAD9FB;
+                    }
+
+                    &:active{
+                        color: #4946B4;
+                        background: #ebebeb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+
+    @include phones {
+        display: flex;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: #ebebeb;
+            height: 120%;
+            width: 100%;
+            z-index: 100;
+            top: -60px;
+        }
+    }
+}
